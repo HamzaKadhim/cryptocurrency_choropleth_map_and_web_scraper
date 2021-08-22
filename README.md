@@ -1,4 +1,4 @@
-# volumechoroplethmap.py
+# volumChoroplethMap.py
 
 This file fetches exchanges names, 24 hour volumes, and origin countries from
 the coingecko API, stores them in an SQL database, writes them to CSV files,
