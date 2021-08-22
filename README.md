@@ -13,7 +13,8 @@ with small land-areas such as Seychelles and Cayman Islands are not included
 within plotly's world map, despite these countries having some of the largest
 volumes of cryptocurrency transactions in the world. This will require a 
 solution in future updates. Modules and libraries used in this file include
-requests, csv, pymysql, pycountry, datetime, plotly.express and pandas. 
+requests, csv, pymysql, pycountry, datetime, plotly.express and pandas.
+All volumes are measured in BTC.
 
 # pageViewPlotter.py
 
