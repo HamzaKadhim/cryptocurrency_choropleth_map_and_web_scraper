@@ -14,7 +14,7 @@ within plotly's world map, despite these countries having some of the largest
 volumes of cryptocurrency transactions in the world. This will require a 
 solution in future updates. Modules and libraries used in this file include
 requests, csv, pymysql, pycountry, datetime, plotly.express and pandas.
-All volumes are measured in BTC.
+All volumes are measured in BTC. The program is structured using OOP.
 
 # pageViewPlotter.py
 
@@ -28,4 +28,4 @@ information from many months, can be used to gouge the rise and fall of
 cryptocurrency popularity through time, and it can also be used to find a 
 correlation with cryptocurrency price movements. Modules and libraries used 
 in this file include bs4, requests, re (regex), datetime, csv,
-matplotlib.pyplot, and pandas.
+matplotlib.pyplot, and pandas. The program is structured using OOP.
