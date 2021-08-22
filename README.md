@@ -18,13 +18,14 @@ All volumes are measured in BTC.
 
 # pageViewPlotter.py
 
-This file scrapes the exchange section of the coingecko website using
+This file scrapes the exchanges section of the coingecko website using
 beautiful soup to obtain the top 10 cryptocurrency exchanges with the highest
 volumes. The exchanges'"about" sections are then scraped to obtain the recent
 monthly pageviews, which are then summed together. The total monthly pageviews 
-of the top 10 exchanges are then paired with their respective months, and
-plotted using matplotlib. This plot, if populated with information from many
-months, can be used to gouge the rise and fall of cryptocurrency popularity
-through time, and it can also be used to find a correlation with
-cryptocurrency price movements. Modules and libraries used in this file include
-bs4, requests, re (regex), datetime, csv, matplotlib.pyplot, and pandas.
+of the top 10 exchanges are then paired with their respective months, written
+to a csv file, and plotted using matplotlib. This plot, if populated with
+information from many months, can be used to gouge the rise and fall of
+cryptocurrency popularity through time, and it can also be used to find a 
+correlation with cryptocurrency price movements. Modules and libraries used 
+in this file include bs4, requests, re (regex), datetime, csv,
+matplotlib.pyplot, and pandas.
