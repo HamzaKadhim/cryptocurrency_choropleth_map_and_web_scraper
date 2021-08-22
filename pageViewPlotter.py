@@ -4,18 +4,18 @@ from pandas import *
 
 
 class TotalViewsScraper:
-	"""Collects the total page views of the day for the to 10 exchanges on 
+	"""Collects the total page views of the month for the top 10 exchanges on 
 	coingecko with the highest trading volumes."""
 
 	def __init__(self):
-		"""Defines lists that will store total page views at specific
+		"""Defines lists that will store total page views scraped at specific
 		dates."""
-		self.exchangeViewsByDay = []
+		self.exchangeViewsByDate = []
 		self.dateOfViews = []
 		self.exchangeViewsAndDate = []
 
 	def _getViews(self):
-		"""Scrapes the total page views for the top 10 exchanges for the day
+		"""Scrapes the total page views for the top 10 exchanges for the month
 		and appends them to a list."""
 		listHolder = []
 		totalExchangeViews = 0
@@ -73,16 +73,16 @@ class TotalViewsScraper:
 	def _readCsvData(self, filename):
 		"""Uses pandas to read the csv file, who's data is to be plotted."""
 		data = read_csv(filename)
-		self.exchangeViewsByDay = data['exchange_views'].tolist()
+		self.exchangeViewsByDate = data['exchange_views'].tolist()
 		self.dateOfViews = data['date'].tolist()
 
 
 	def plotExchangePageViews(self, filename):
-		"""Plots the exchange views per date using matplotlib."""
+		"""Plots the exchange views per month using matplotlib."""
 		self._readCsvData(filename)
 		plt.style.use('seaborn')
 		fig, ax = plt.subplots()
-		ax.plot(self.dateOfViews, self.exchangeViewsByDay, linewidth=3)
+		ax.plot(self.dateOfViews, self.exchangeViewsByDate, linewidth=3)
 
 		ax.set_title("Exchange Views by Date", fontsize=24)
 		ax.set_xlabel("Date", fontsize=14)
@@ -102,8 +102,8 @@ if __name__ == '__main__':
 	#instanceTwo.appendExchangePageViewsCsv('exchangepageviews.csv')
 	instanceOne.plotExchangePageViews('exchangepageviews.csv')
 
-	# Program must be run on different day sin order to gather data before it is
-	# able to construct a meaningful plot.
+	# Program must be run on different days in order to gather data before
+	# it is able to construct a meaningful plot.
 
 
 
